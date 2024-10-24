@@ -63,7 +63,7 @@ export default function CommandSearch() {
         const fetchSuggestions = async (query: string) => {
             try {
                 const response = await fetch(
-                    `https://api.tomtom.com/search/2/search/${query}.json?key=Kn04D9WGB0uiMyKlmGwGJYtj9NTnKAc8&typeahead=true&limit=5&idxSet=Geo&entityType=Municipality,PostalCodeArea`
+                    `https://api.tomtom.com/search/2/search/${query}.json?key=${process.env.NEXT_PUBLIC_TOMTOM}&typeahead=true&limit=5&idxSet=Geo&entityType=Municipality,PostalCodeArea`
                 );
                 const data = await response.json();
 
